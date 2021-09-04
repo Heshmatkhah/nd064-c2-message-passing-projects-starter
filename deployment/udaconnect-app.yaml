@@ -34,6 +34,9 @@ spec:
       - image: heshmatkhah/udaconnect-frontend-app:latest
         name: udaconnect-app
         imagePullPolicy: Always
+        env:
+        - name: ENDPOINT_BASE_URL
+          value: 192.168.7.230:30001
         resources:
           requests:
             memory: "128Mi"

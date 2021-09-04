@@ -4,8 +4,8 @@ import Connection from "./Connection";
 class Persons extends Component {
   constructor(props) {
     super(props);
-    // TODO: endpoint should be abstracted into a config variable
-    this.endpoint_url = "http://localhost:30001/api/persons";
+    const ENDPOINT_BASE_URL = process.env.ENDPOINT_BASE_URL || "localhost:30001";
+    this.endpoint_url = `http://${ENDPOINT_BASE_URL}/api/persons`;
     this.state = {
       persons: [],
       display: null,
