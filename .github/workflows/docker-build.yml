@@ -33,7 +33,7 @@ jobs:
           file: modules/api/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: heshmatkhah/udaconnect/api:latest
+          tags: heshmatkhah/udaconnect-api:latest
       - name: Build Frontend and push
         uses: docker/build-push-action@v2
         with:
@@ -41,4 +41,4 @@ jobs:
           file: modules/frontend/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: heshmatkhah/udaconnect/frontend:latest
+          tags: heshmatkhah/udaconnect-frontend-app:latest
